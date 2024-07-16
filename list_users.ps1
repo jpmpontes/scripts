@@ -1,0 +1,2 @@
+﻿$base="OU=Usuarios,OU=Ilha do Governador,OU=10 - BBRJ,DC=bbrk,DC=com,DC=br"
+Get-ADUser -Filter * -SearchBase $base -Properties * | Select-Object CN,Company,DisplayName,EmailAddress,GivenName,info,Name,SamAccountName,Surname,title,UserPrincipalName | Export-csv C:\usuarios_ilha.csv -NoTypeInformation

@@ -1,0 +1,2 @@
+﻿$base="OU=Grupos,OU=Tijuca,OU=10 - BBRJ,DC=bbrk,DC=com,DC=br"
+Get-ADGroup -Filter * -SearchBase $base  -Properties * | Select-Object Name,GroupCategory,GroupScope,cn,SamAccountName | Export-csv C:\groups_tijuca.csv -NoTypeInformation
